@@ -191,7 +191,7 @@ export default function CashierView() {
                         {item.name}
                       </p>
                       <p className="text-sm text-gray-300">
-                        ${item.unit_price} x {item.quantity}
+                        R{item.unit_price} x {item.quantity}
                       </p>
                     </div>
                     <div className="flex items-center space-x-2">
