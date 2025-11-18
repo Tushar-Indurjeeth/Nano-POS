@@ -12,7 +12,7 @@
 - **Database:** PostgreSQL, accessed directly using the `pg` client with raw SQL queries for maximum flexibility and control over database operations.
 - **Database Connection Management:** `pg.Pool` is utilized for efficient and robust database connection pooling.
 - **Environment Variables:** `dotenv` is used to manage sensitive configuration and database credentials, separating them from the codebase.
-- **Performance Optimization:** React Compiler is enabled (`reactCompiler: true`) to automatically optimize React component re-renders.
+- **Performance Optimization:** React Compiler is enabled to automatically optimize React component re-renders.
 - **API Design:** RESTful API endpoints are implemented using Next.js Route Handlers.
 - **Transactional Integrity:** Database transactions (`BEGIN`, `COMMIT`, `ROLLBACK`) are employed for critical operations like checkout to ensure data consistency and atomicity.
 - **Idempotency:** The checkout API implements idempotency using an `X-Idempotency-Key` header to prevent duplicate transactions.
@@ -21,7 +21,7 @@
 
 ## Trade-offs
 
-- **Raw SQL vs. ORM:** While raw SQL offers fine-grained control and potential performance benefits, it increases development time, requires careful query management, and lacks the type safety and schema migration benefits of a full ORM (like Prisma, which is present as a dev dependency but not used at runtime for queries).
+- **Raw SQL vs. ORM:** While raw SQL offers fine-grained control and potential performance benefits, it increases development time, requires careful query management, and lacks the type safety and schema migration benefits of a full ORM.
 - **Client-side Product Search:** The product search functionality is implemented client-side. This approach is simple to develop but may not scale efficiently for very large product datasets, as all products are initially fetched and filtered in the browser. A server-side search would be more scalable for extensive inventories.
 
 ## Known Limitations
