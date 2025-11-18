@@ -1,5 +1,7 @@
 # Nano POS
 
+Built this based off of the specifications here: [POS Nano.pdf](https://github.com/Tushar-Indurjeeth/Nano-POS/blob/001050e007a55bcc1db32453b8f1c58727e44c89/POS%20Nano.pdf).
+
 ## Live Demo:
 
 [https://nano-pos.tushar.co.za/](https://nano-pos.tushar.co.za/)
@@ -33,7 +35,11 @@
 
 ## Getting Started Locally
 
-First, run the development server:
+First, install the dependancies:
+```bash
+npm install
+```
+Then run the development server:
 
 ```bash
 npm run dev
@@ -49,7 +55,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Setup for Postgres:
 
-### 1️. Install Docker & Docker Compose
+### Install Docker & Docker Compose
 
 If you haven’t already installed **Docker** and **Docker Compose**, install them first:
 
@@ -77,7 +83,7 @@ If you haven’t already installed **Docker** and **Docker Compose**, install th
 
 ### Start the container
 
-Navigate back to the root directory and run the following:
+Navigate to the root directory and run the following:
 
 ```sh
 sudo docker compose up -d
@@ -97,4 +103,16 @@ To stop the running containers:
 
 ```sh
 sudo docker-compose down
+```
+
+## Initialize and seed the database:
+After Postgres is up and running:
+
+```sh
+npm run db:init
+```
+
+Then:
+```sh
+npm run db:seed
 ```
